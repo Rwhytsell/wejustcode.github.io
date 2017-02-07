@@ -264,20 +264,18 @@
 				<p>Shoot us a message below! We would love to help you discover new ways to enhance &amp; build your experience.</p>
 			</div>
 			<div class="col-md-6 col-md-offset-3 wow fadeInUp" data-wow-delay=".3s">
-				<form action="https://formspree.io/ryan@wejustcode.io" method="post" enctype="text/plain">
-					<div class="form-group">
-						<input class="form-control" id="Name" placeholder="Name" type="text" name="name">
-					</div>
-					<div class="form-group">
-						<input name="email" class="form-control" id="Email" placeholder="Email" type="email">
-					</div>
-					<div class="form-group">
-						<textarea name="message" class="form-control" placeholder="Message" rows="3"></textarea>
-					</div>
-					<input type="hidden" name="_subject" value="Contact from website"/>
+				<form id="contactform" method="post" enctype="text/plain">
+					<input class="form-control form-group" id="Name" placeholder="Name" type="text" name="name">
+					<input name="email" class="form-control form-group" id="Email" placeholder="Email" type="email">
+					<textarea name="message" class="form-control form-group" placeholder="Message" rows="3"></textarea>
+					<input type="hidden" name="_subject" value="Website contact"/>
 					<input type="text" name="_gotcha" style="display:none" />
 					<input type="submit" class="btn-block" href="#" value="Send" name="_next"/>
 				</form>
+				<script>
+    			var contactform =  document.getElementById('contactform');
+    			contactform.setAttribute('action', '//formspree.io/' + 'ryan' + '@' + 'wejustcode' + '.' + 'io');
+				</script>
 			</div>
 		</div>
 	</section>
